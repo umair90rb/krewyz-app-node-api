@@ -11,6 +11,7 @@ const comments = require("../routes/comments");
 const saved = require("../routes/saved");
 const files = require("../routes/file");
 const admin = require("../routes/admin");
+const city = require("../routes/city");
 
 module.exports = function (app) {
   app.use(express.json());
@@ -25,6 +26,7 @@ module.exports = function (app) {
   app.use("/api/reviews", reviews);
   app.use("/api/comments", comments);
   app.use("/api/saved", saved);
+  app.use("/api/cities", city);
   app.use("/api/files", files);
   app.use("/api/admin", admin);
 };
