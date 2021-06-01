@@ -21,7 +21,7 @@ router.post("/upload", upload.single("file"), (req, res, next) => {
     error.httpStatusCode = 400;
     return next(error);
   }
-  res.send(`${req.protocol}://${req.headers["host"]}/${file.filename}`);
+  res.send(`${req.headers["host"]}/${file.filename}`);
 });
 
 router.post("/multiple", upload.array("file", 12), (req, res, next) => {
@@ -33,9 +33,7 @@ router.post("/multiple", upload.array("file", 12), (req, res, next) => {
   }
   var arr = [];
 
-  files.forEach((file) =>
-    arr.push(`${req.protocol}/${req.headers["host"]}/${file.filename}`)
-  );
+  files.forEach((file) => arr.push(`${req.headers["host"]}/${file.filename}`));
 
   res.send(arr);
 });
