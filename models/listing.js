@@ -8,7 +8,7 @@ const listing = new mongoose.Schema({
   category: { type: String, default: "" },
   endTime: { type: String, default: "" },
   startTime: { type: String, default: "" },
-  rating: { type: Number, default: "" },
+  rating: { type: Number, default: 0 },
   mainImageUrl: { type: String, default: "" },
   latitude: { type: Number, default: 0 },
   longitude: { type: Number, default: 0 },
