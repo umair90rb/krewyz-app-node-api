@@ -12,6 +12,7 @@ const saved = require("../routes/saved");
 const files = require("../routes/file");
 const admin = require("../routes/admin");
 const city = require("../routes/city");
+const forumComment = require("../routes/cityComment");
 
 module.exports = function (app) {
   app.use(express.json());
@@ -29,4 +30,5 @@ module.exports = function (app) {
   app.use("/api/cities", city);
   app.use("/api/files", files);
   app.use("/api/admin", admin);
+  app.use("/api/forumComment", forumComment);
 };
