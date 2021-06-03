@@ -26,6 +26,13 @@ router.get("/user/:user", async (req, res) => {
   res.send(cityComment);
 });
 
+router.get("/forum/:id", async (req, res) => {
+  const cityComment = await CityComment.find({
+    commentFor: `${req.params.id}`,
+  });
+  res.send(cityComment);
+});
+
 router.get("/:id", async (req, res) => {
   const cityComment = await CityComment.findById(req.params.id);
   res.send(cityComment);
