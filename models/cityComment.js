@@ -5,6 +5,7 @@ const cityComment = new mongoose.Schema({
   commentFor: { type: String, default: "" },
   commentText: { type: String, default: "" },
   byEmail: { type: String, default: "" },
+  avatar: { type: String, default: "" },
   city: { type: String, default: "" },
   commentOn: { type: Date, default: Date.now },
 });

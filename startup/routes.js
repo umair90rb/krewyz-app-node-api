@@ -13,7 +13,6 @@ const files = require("../routes/file");
 const admin = require("../routes/admin");
 const city = require("../routes/city");
 const forumComment = require("../routes/cityComment");
-var path = require("path");
 
 module.exports = function (app) {
   app.use(express.json());
