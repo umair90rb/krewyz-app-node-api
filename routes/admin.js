@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+// var path = require("path");
 
 router.get("/:email/:pass", async (req, res) => {
   const email = req.params.email;
@@ -10,5 +11,9 @@ router.get("/:email/:pass", async (req, res) => {
     res.send(false);
   }
 });
+
+// router.get("/static", (req, res) => {
+//   res.send(path.join(__dirname, "public"));
+// });
 
 module.exports = router;
