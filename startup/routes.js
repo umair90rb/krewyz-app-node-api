@@ -16,7 +16,7 @@ const forumComment = require("../routes/cityComment");
 
 module.exports = function (app) {
   app.use(express.json());
-  app.use(express.static("./public/"));
+  app.use("/public", express.static(__dirname + "/public"));
   app.use(cors());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use("/api/users", users);
